@@ -1,10 +1,10 @@
-// °úÁ¦¸í: Maze Runner
-// °úÁ¦°³¿ä: ********************
-// »ç¿ëÇÑ ÇÏµå¿þ¾î (±â´É): GPIO, Joy-stick, KeyScan, LED
-// Á¦ÃâÀÏ:2022. 5. 25
-// Á¦ÃâÀÚ Å¬·¡½º: È­¿äÀÏ¹Ý
-//       ÇÐ¹ø:2020132024
-//       ÀÌ¸§: ÀÌ¼±¿ì
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: Maze Runner
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ********************
+// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïµï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½): GPIO, Joy-stick, KeyScan, LED
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:2022. 5. 25
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½: È­ï¿½ï¿½ï¿½Ï¹ï¿½
+//       ï¿½Ð¹ï¿½:2020132024
+//       ï¿½Ì¸ï¿½: ï¿½Ì¼ï¿½ï¿½ï¿½
 #include "stm32f4xx.h"
 #include "GLCD.h"
 
@@ -53,12 +53,12 @@ int	Xcur=0, Ycur=0; // Mouse_X, Mouse_Y
 
 int main(void)
 {
-    _GPIO_Init();       // GPIO (LED & SW) ÃÊ±âÈ­
-    LCD_Init();         // LCD ¸ðµâ ÃÊ±âÈ­
+    _GPIO_Init();       // GPIO (LED & SW) ï¿½Ê±ï¿½È­
+    LCD_Init();         // LCD ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
     DelayMS(100);
 
-    GPIOG->ODR = 0xFF00;	// LED ÃÊ±â°ª: LED0~7 Off
-    DisplayInitScreen();	// LCD ÃÊ±âÈ­¸é
+    GPIOG->ODR = 0xFF00;	// LED ï¿½Ê±â°ª: LED0~7 Off
+    DisplayInitScreen();	// LCD ï¿½Ê±ï¿½È­ï¿½ï¿½
     Draw_Maze();
     
    while(1)
@@ -70,13 +70,13 @@ int main(void)
                     Xcur=Ycur=0;
                     Ucount=Dcount=0;
                     Lcount=Rcount=0; 
-                    _GPIO_Init();       // GPIO (LED & SW) ÃÊ±âÈ­ 
-                    LCD_Init();         // LCD ¸ðµâ ÃÊ±âÈ­
+                    _GPIO_Init();       // GPIO (LED & SW) ï¿½Ê±ï¿½È­ 
+                    LCD_Init();         // LCD ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
                     
-                    GPIOG->ODR = 0xFF00;        // LED ÃÊ±â°ª: LED0~7 Off
+                    GPIOG->ODR = 0xFF00;        // LED ï¿½Ê±â°ª: LED0~7 Off
                     GPIOG->ODR |= 0x0001;       // GPIOG->ODR.0 'H'(LED0 ON)
                     
-                    DisplayInitScreen();        // LCD ÃÊ±âÈ­¸é
+                    DisplayInitScreen();        // LCD ï¿½Ê±ï¿½È­ï¿½ï¿½
                     Draw_Maze();
                     break;
                     
@@ -91,8 +91,8 @@ int main(void)
                 
                       
                       
-              /*    //½ºÆ½ ¸Á°¡Á®¼­ ½ºÀ§Ä¡·Î ´ëÃ¼
-                  //½ºÆ½ ¸Á°¡Á®¼­ ½ºÀ§Ä¡·Î ´ëÃ¼
+              /*    //ï¿½ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½Ã¼
+                  //ï¿½ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½Ã¼
                   case SW3_PUSH:	//Left stick
                     if(SW7_Flag==1) {
                      if (Xcur <= 0) {
@@ -105,8 +105,8 @@ int main(void)
                      Xcur--;
                      Lcount++;
                      
-                     GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                     GPIOG->ODR |= 0x0089;        //0, 7 LED 'H'À¯Áö / SW3 ´©¸£¸é LED 3 ÄÑ±â
+                     GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                     GPIOG->ODR |= 0x0089;        //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 3 ï¿½Ñ±ï¿½
                      
                      X_L_moveerase();
                      Draw_Maze();
@@ -127,8 +127,8 @@ int main(void)
                      Xcur++;
                      Rcount++;
                      
-                     GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                     GPIOG->ODR |= 0x0091;       //0, 7 LED 'H'À¯Áö / SW4 ´©¸£¸é LED 4 ÄÑ±â
+                     GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                     GPIOG->ODR |= 0x0091;       //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 4 ï¿½Ñ±ï¿½
                      
                      X_R_moveerase();
                      Draw_Maze();
@@ -149,8 +149,8 @@ int main(void)
                     Ycur--;
                     Ucount++;
                     
-                    GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                    GPIOG->ODR |= 0x0083;         //0, 7 LED 'H'À¯Áö / SW1 ´©¸£¸é LED 1 ÄÑ±â
+                    GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                    GPIOG->ODR |= 0x0083;         //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 1 ï¿½Ñ±ï¿½
                     
                     Y_U_moveerase();
                     Draw_Maze();
@@ -171,8 +171,8 @@ int main(void)
                       Ycur++;
                       Dcount++;
                       
-                      GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                      GPIOG->ODR |= 0x0085;        //0, 7 LED 'H'À¯Áö / SW2 ´©¸£¸é LED 2 ÄÑ±â
+                      GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                      GPIOG->ODR |= 0x0085;        //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 2 ï¿½Ñ±ï¿½
                       
                       Y_D_moveerase();
                       Draw_Maze();
@@ -195,8 +195,8 @@ int main(void)
                      Xcur--;
                      Lcount++;
                      
-                     GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                     GPIOG->ODR |= 0x0089;        //0, 7 LED 'H'À¯Áö / SW3 ´©¸£¸é LED 3 ÄÑ±â
+                     GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                     GPIOG->ODR |= 0x0089;        //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 3 ï¿½Ñ±ï¿½
                      
                      X_L_moveerase();
                      Draw_Maze();
@@ -220,8 +220,8 @@ int main(void)
                      Xcur++;
                      Rcount++;
                      
-                    GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                    GPIOG->ODR |= 0x0091;       //0, 7 LED 'H'À¯Áö / SW4 ´©¸£¸é LED 4 ÄÑ±â
+                    GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                    GPIOG->ODR |= 0x0091;       //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 4 ï¿½Ñ±ï¿½
                     
                     X_R_moveerase();
                     Draw_Maze();
@@ -245,8 +245,8 @@ int main(void)
                     Ycur--;
                     Ucount++;
                     
-                    GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                    GPIOG->ODR |= 0x0083;         //0, 7 LED 'H'À¯Áö / SW1 ´©¸£¸é LED 1 ÄÑ±â
+                    GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                    GPIOG->ODR |= 0x0083;         //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 1 ï¿½Ñ±ï¿½
                     
                     Y_U_moveerase();
                     Draw_Maze();
@@ -270,8 +270,8 @@ int main(void)
                       Ycur++;
                       Dcount++;
                       
-                      GPIOG->ODR = 0xFF00;    // LED ÃÊ±â°ª: LED0~7 Off
-                      GPIOG->ODR |= 0x0085;        //0, 7 LED 'H'À¯Áö / SW2 ´©¸£¸é LED 2 ÄÑ±â
+                      GPIOG->ODR = 0xFF00;    // LED ï¿½Ê±â°ª: LED0~7 Off
+                      GPIOG->ODR |= 0x0085;        //0, 7 LED 'H'ï¿½ï¿½ï¿½ï¿½ / SW2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ LED 2 ï¿½Ñ±ï¿½
                       
                       Y_D_moveerase();
                       Draw_Maze();
@@ -299,108 +299,108 @@ int main(void)
 
 void DisplayInitScreen(void)
 {
-    LCD_Clear(RGB_WHITE);       // È­¸é Å¬¸®¾î
-    LCD_SetFont(&Gulim7);       // ÆùÆ® : ±¼¸² 7
-    LCD_SetBackColor(RGB_YELLOW);       // ±ÛÀÚ¹è°æ»ö :   Yellow
-    LCD_SetTextColor(RGB_BLUE);        // ±ÛÀÚ»ö : Blue
+    LCD_Clear(RGB_WHITE);       // È­ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+    LCD_SetFont(&Gulim7);       // ï¿½ï¿½Æ® : ï¿½ï¿½ï¿½ï¿½ 7
+    LCD_SetBackColor(RGB_YELLOW);       // ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ :   Yellow
+    LCD_SetTextColor(RGB_BLUE);        // ï¿½ï¿½ï¿½Ú»ï¿½ : Blue
     LCD_DisplayText(0,0,"Maze Runner");       // Title
 
-    LCD_SetTextColor(RGB_BLACK);	       //±ÛÀÚ¹è°æ»ö : Black
-    LCD_SetBackColor(RGB_WHITE);	//±ÛÀÚ¹è°æ»ö : Whte
+    LCD_SetTextColor(RGB_BLACK);	       //ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ : Black
+    LCD_SetBackColor(RGB_WHITE);	//ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ : Whte
     
     LCD_SetBrushColor(RGB_BLUE);      //mouse color: Blue
-    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);    //mouse ÃÊ±âÈ­
+    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);    //mouse ï¿½Ê±ï¿½È­
 }
 
 void Draw_Maze(void)
 {
     
-    LCD_SetBackColor(RGB_WHITE);	//±ÛÀÚ¹è°æ»ö : Whte
-    //¹Ì·ÎÆÇ¿¡ ±ÛÀÚ ÀÔ·Â
-    LCD_SetTextColor(RGB_BLACK);	//±ÛÀÚ»ö : Black
+    LCD_SetBackColor(RGB_WHITE);	//ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ : Whte
+    //ï¿½Ì·ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
+    LCD_SetTextColor(RGB_BLACK);	//ï¿½ï¿½ï¿½Ú»ï¿½ : Black
     LCD_DisplayText(1,0," (0,0) ");
     LCD_DisplayText(1,9," (3,0) ");
     LCD_DisplayText(3,12," RESET (SW 0) ");
     LCD_DisplayText(4,12," START (SW 7) ");
     LCD_DisplayText(5,12," STATUS: (X,Y) ");
-    LCD_SetTextColor(RGB_RED);	//±ÛÀÚ»ö : Red
+    LCD_SetTextColor(RGB_RED);	//ï¿½ï¿½ï¿½Ú»ï¿½ : Red
     LCD_DisplayChar(5,22,'X');
     LCD_DisplayChar(5,24,'Y');
-    LCD_SetTextColor(RGB_BLACK);	//±ÛÀÚ»ö : Black
+    LCD_SetTextColor(RGB_BLACK);	//ï¿½ï¿½ï¿½Ú»ï¿½ : Black
     LCD_DisplayText(9,0," (0,3) ");
     LCD_DisplayText(9,9," (3,3) ");
     LCD_DisplayText(10,2," U:0, D:0, L:0, R:0 ");
-    LCD_SetTextColor(RGB_RED);	//±ÛÀÚ»ö : Red
+    LCD_SetTextColor(RGB_RED);	//ï¿½ï¿½ï¿½Ú»ï¿½ : Red
     LCD_DisplayChar(10,5,'0');
     LCD_DisplayChar(10,10,'0');
     LCD_DisplayChar(10,15,'0');
     LCD_DisplayChar(10,20,'0');
  
-    LCD_SetPenColor(RGB_BLACK);        //Ææ»ö : Black   //¹Ì·ÎÆÇ ±×¸®±â
+    LCD_SetPenColor(RGB_BLACK);        //ï¿½ï¿½ï¿½ : Black   //ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½
     for (int i=0; i<4; i++)
     {
-      LCD_DrawLine(10, 30+i*20, 70, 30+i*20);   //¼öÆò¼±
-      LCD_DrawLine(10+i*20, 30, 10+i*20, 90);   //¼öÁ÷¼±
+      LCD_DrawLine(10, 30+i*20, 70, 30+i*20);   //ï¿½ï¿½ï¿½ï¿½
+      LCD_DrawLine(10+i*20, 30, 10+i*20, 90);   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 }
 
 void X_R_moveerase(void)
 {
     LCD_SetBrushColor(RGB_WHITE);       //mouse color: White
-    LCD_DrawFillRect(5+(Xcur-1)*20, 25+Ycur*20, 10, 10);        //mouse ÃÊ±âÈ­
+    LCD_DrawFillRect(5+(Xcur-1)*20, 25+Ycur*20, 10, 10);        //mouse ï¿½Ê±ï¿½È­
     
     LCD_SetBrushColor(RGB_BLUE);        //mouse color: Blue
-    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);           //mouse ÃÊ±âÈ­   
+    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);           //mouse ï¿½Ê±ï¿½È­   
 }
 
 void X_L_moveerase(void)
 {
     LCD_SetBrushColor(RGB_WHITE);       //mouse color: White
-    LCD_DrawFillRect(5+(Xcur+1)*20, 25+Ycur*20, 10, 10);        //mouse ÃÊ±âÈ­
+    LCD_DrawFillRect(5+(Xcur+1)*20, 25+Ycur*20, 10, 10);        //mouse ï¿½Ê±ï¿½È­
     
     LCD_SetBrushColor(RGB_BLUE);        //mouse color: Blue
-    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);            //mouse ÃÊ±âÈ­  
+    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);            //mouse ï¿½Ê±ï¿½È­  
 }
 
 void Y_D_moveerase(void)
 {
     LCD_SetBrushColor(RGB_WHITE);       //mouse color: White
-    LCD_DrawFillRect(5+Xcur*20, 25+(Ycur-1)*20, 10, 10);        //mouse ÃÊ±âÈ­
+    LCD_DrawFillRect(5+Xcur*20, 25+(Ycur-1)*20, 10, 10);        //mouse ï¿½Ê±ï¿½È­
     
     LCD_SetBrushColor(RGB_BLUE);        //mouse color: Blue
-    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);            //mouse ÃÊ±âÈ­   
+    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);            //mouse ï¿½Ê±ï¿½È­   
 }
 
 void Y_U_moveerase(void)
 {
     LCD_SetBrushColor(RGB_WHITE);       //mouse color: White
-    LCD_DrawFillRect(5+Xcur*20, 25+(Ycur+1)*20, 10, 10);        //mouse ÃÊ±âÈ­
+    LCD_DrawFillRect(5+Xcur*20, 25+(Ycur+1)*20, 10, 10);        //mouse ï¿½Ê±ï¿½È­
     
     LCD_SetBrushColor(RGB_BLUE);        //mouse color: Blue
-    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);    //mouse ÃÊ±âÈ­   
+    LCD_DrawFillRect(5+Xcur*20, 25+Ycur*20, 10, 10);    //mouse ï¿½Ê±ï¿½È­   
 }
 
 void XcurYcur_UDLRcount(void)
 {
   LCD_SetBrushColor(RGB_WHITE);       //block color: White
   
-    //Xcur, Ycur À§Ä¡¿¡ Èò»ö ¹Ú½º
-    LCD_DrawFillRect(145, 55, 5, 10);        //'X' Áö¿ì±â
-    LCD_DrawFillRect(133, 55, 5, 10);        //'Y' Áö¿ì±â
+    //Xcur, Ycur ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½
+    LCD_DrawFillRect(145, 55, 5, 10);        //'X' ï¿½ï¿½ï¿½ï¿½ï¿½
+    LCD_DrawFillRect(133, 55, 5, 10);        //'Y' ï¿½ï¿½ï¿½ï¿½ï¿½
     
-    //U/D/L/R count À§Ä¡¿¡ Èò»ö¹Ú½º
-    LCD_DrawFillRect(31, 110, 5, 10);        //'U' Áö¿ì±â
-    LCD_DrawFillRect(61, 110, 5, 10);        //'D' Áö¿ì±â
-    LCD_DrawFillRect(91, 110, 5, 10);        //'L' Áö¿ì±â
-    LCD_DrawFillRect(121, 110, 5, 10);        //'R' Áö¿ì±â
+    //U/D/L/R count ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú½ï¿½
+    LCD_DrawFillRect(31, 110, 5, 10);        //'U' ï¿½ï¿½ï¿½ï¿½ï¿½
+    LCD_DrawFillRect(61, 110, 5, 10);        //'D' ï¿½ï¿½ï¿½ï¿½ï¿½
+    LCD_DrawFillRect(91, 110, 5, 10);        //'L' ï¿½ï¿½ï¿½ï¿½ï¿½
+    LCD_DrawFillRect(121, 110, 5, 10);        //'R' ï¿½ï¿½ï¿½ï¿½ï¿½
     
-    LCD_SetTextColor(RGB_RED);	//±ÛÀÚ»ö : Red
+    LCD_SetTextColor(RGB_RED);	//ï¿½ï¿½ï¿½Ú»ï¿½ : Red
     
-    //X,YÁÂÇ¥ ÀÔ·Â
-    LCD_DisplayChar(5,22,Xcur+0x30);      //0x30ÀÌ ¹º ÀÇ¹ÌÁö...
+    //X,Yï¿½ï¿½Ç¥ ï¿½Ô·ï¿½
+    LCD_DisplayChar(5,22,Xcur+0x30);      //0x30ï¿½ï¿½ ï¿½ï¿½ ï¿½Ç¹ï¿½ï¿½ï¿½...
     LCD_DisplayChar(5,24,Ycur+0x30);
     
-    //U/D/L/Rcount È½¼ö ÀÔ·Â
+    //U/D/L/Rcount È½ï¿½ï¿½ ï¿½Ô·ï¿½
     LCD_DisplayChar(10,5,Ucount+0x30);
     LCD_DisplayChar(10,10,Dcount+0x30);
     LCD_DisplayChar(10,15,Lcount+0x30);
@@ -433,7 +433,7 @@ void RCount_0_9(void)
 }
 
 void BEEP(void)			/* beep for 30 ms */
-{ 	
+{ 	HGFGHF
 	GPIOF->ODR |=  0x0200;	// PF9 'H' Buzzer on
 	DelayMS(30);		// Delay 30 ms
 	GPIOF->ODR &= ~0x0200;	// PF9 'L' Buzzer off
@@ -477,7 +477,7 @@ uint16_t JOY_Scan(void)	// input joy stick NAVI_*
 	}
 }
 
-/* Switch°¡ ÀÔ·ÂµÇ¾ú´ÂÁö¸¦ ¿©ºÎ¿Í ¾î¶² switch°¡ ÀÔ·ÂµÇ¾ú´ÂÁöÀÇ Á¤º¸¸¦ returnÇÏ´Â ÇÔ¼ö  */ 
+/* Switchï¿½ï¿½ ï¿½Ô·ÂµÇ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½î¶² switchï¿½ï¿½ ï¿½Ô·ÂµÇ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ returnï¿½Ï´ï¿½ ï¿½Ô¼ï¿½  */ 
 uint8_t key_flag = 0;
 uint16_t KEY_Scan(void)	// input key SW0 - SW7 
 { 
@@ -503,26 +503,30 @@ uint16_t KEY_Scan(void)	// input key SW0 - SW7
 	}
 }
 
+typedef struct
+{
+  uint32_t TYPE_GPIO_CLK
+} LED_GPIO_SET
 void _GPIO_Init(void)
 {
-      	// LED (GPIO G) ¼³Á¤
-    	RCC->AHB1ENR	|=  0x00000040;	// RCC_AHB1ENR : GPIOG(bit#6) Enable							
-	GPIOG->MODER 	|=  0x00005555;	// GPIOG 0~7 : Output mode (0b01)						
-	GPIOG->OTYPER	&= ~0x00FF;	        // GPIOG 0~7 : Push-pull  (GP8~15:reset state)	
- 	GPIOG->OSPEEDR 	|=  0x00005555;	// GPIOG 0~7 : Output speed 25MHZ Medium speed 
-    
-	// SW (GPIO H) ¼³Á¤ 
+      	// LED (GPIO G) ï¿½ï¿½ï¿½ï¿½
+  RCC->AHB1ENR	|=  0x00000040;	  // RCC_AHB1ENR : GPIOG(bit#6) Enable
+	GPIOG->MODER 	|=  0x00005555;	  // GPIOG 0~7 : Output mode (0b01)
+	GPIOG->OTYPER	&= ~0x00FF;	      // GPIOG 0~7 : Push-pull  (GP8~15:reset state)
+ 	GPIOG->OSPEEDR 	|=  0x00005555;	// GPIOG 0~7 : Output speed 25MHZ Medium speed
+
+	// SW (GPIO H) ï¿½ï¿½ï¿½ï¿½
 	RCC->AHB1ENR    |=  0x00000080;	        // RCC_AHB1ENR : GPIOH(bit#7) Enable							
-	GPIOH->MODER 	&= ~0xFFFF0000;	// GPIOH 8~15 : Input mode (reset state)				
+	GPIOH->MODER 	&= ~0xFFFF0000;	// GPIOH 8~15 : Input mode (reset state)
 	GPIOH->PUPDR 	&= ~0xFFFF0000;	// GPIOH 8~15 : Floating input (No Pull-up, pull-down) :reset state
 
-	// Buzzer (GPIO F) ¼³Á¤ 
+	// Buzzer (GPIO F) ï¿½ï¿½ï¿½ï¿½ 
     	RCC->AHB1ENR	|=  0x00000020;         // RCC_AHB1ENR : GPIOF(bit#5) Enable							
 	GPIOF->MODER 	|=  0x00040000;	// GPIOF 9 : Output mode (0b01)						
 	GPIOF->OTYPER 	&= ~0x0200;	        // GPIOF 9 : Push-pull  	
  	GPIOF->OSPEEDR 	|=  0x00040000;	// GPIOF 9 : Output speed 25MHZ Medium speed 
 
-        //Joy Stick SW(PORT I) ¼³Á¤
+        //Joy Stick SW(PORT I) ï¿½ï¿½ï¿½ï¿½
 	RCC->AHB1ENR	|= 0X00000100;	// RCC_AHB1ENR GPIOI Enable
 	GPIOI->MODER	&= 0X000FFC00;	// GPIOI 5~9 : Input mode (reset state)
 	GPIOI->PUPDR	&= ~0x000FFC00;	// GPIOI 5~9 : Floating input (No Pull-up, pull-down) (reset state)
