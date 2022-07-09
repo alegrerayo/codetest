@@ -1,0 +1,102 @@
+# ninja log v5
+28	306	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/FRAM group/FRAM.xcl	52cb4231d1512525
+36	313	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim10_8x16_ASCII.xcl	76bc2d9338bfeeb1
+42	326	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/GLCD.xcl	4f64e3079c1e09b8
+311	415	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim7_6x10_ASCII.xcl	c9f935fc0eaa2eb4
+1	337	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/CMSIS/system_stm32f4xx.xcl	cad1a0b2bfe38f41
+720	1054	6769340693199366	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim10_8x16_ASCII.pbi	e144d2fb34b45e80
+666	983	6769340692494629	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/GuiObject.pbi	209cb6d74c91ea97
+489	618	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_rcc.xcl	311e9f4c0d073c5c
+478	591	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.xcl	8b0cf471b1f36332
+320	436	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim8_8x12_ASCII.xcl	99ea0bc0199fb66d
+31	346	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/GuiObject.xcl	bec8ee5cef08ae70
+34	355	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim20_16x34_ASCII.xcl	edb9e3d4d400342b
+332	456	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/ILI9163B.xcl	d7c789074a474845
+344	472	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim28_24x48_ASCII.xcl	96c84100ec7e4b5e
+353	483	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_fsmc.xcl	a4b7bd29e9e15e4c
+421	543	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.xcl	8702e3a68aed4715
+550	661	6769340680000000	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_gpio.xcl	ba3fc8fc83332ea5
+361	718	6769340689833290	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/GLCD.pbi	7851c0c4f9db5b87
+462	771	6769340690364610	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/CMSIS/system_stm32f4xx.pbi	19ca15f379dc3917
+985	1246	6769340695116962	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_fsmc.pbi	8d62abc4c61bd3ba
+442	807	6769340690724988	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/FRAM group/FRAM.pbi	8cf6b13d28e10503
+624	958	6769340692234569	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim20_16x34_ASCII.pbi	7809ce33a3c6a985
+597	970	6769340692354605	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim28_24x48_ASCII.pbi	4bc80526efdb41b1
+773	1102	6769340693662111	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim7_6x10_ASCII.pbi	4270d4a599723f98
+809	1131	6769340693965239	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/Gulim8_8x12_ASCII.pbi	58126921a79af9b9
+960	1252	6769340695126963	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_rcc.pbi	e6e197bc2944327c
+972	1296	6769340695614094	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/GUI/ILI9163B.pbi	c88b103942eef389
+1057	1349	6769340696144123	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+1104	1374	6769340696393986	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/STM32F4xx_StdPeriph_Driver/stm32f4xx_gpio.pbi	211859b135409915
+2	224	6769343985604971	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+1254	1481	6769340697476459	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part1.pbi	257549bfc380f7e2
+1249	1486	6769340697526478	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part0.pbi	19a3ba60c4ea7ef1
+1377	1577	6769340698439514	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part2.pbi	38b311f9b56df237
+226	361	6769343986982490	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+364	509	6769343988454985	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+512	1337	6769343996387975	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	216	6769344049393717	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+218	345	6769344050682724	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+348	490	6769344052147234	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+493	1319	6769344060044251	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	220	6769344113222690	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+223	353	6769344114555034	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+356	493	6769344115963129	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+496	1334	6769344123994844	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+3	237	6769344177334519	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+239	386	6769344178831701	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+389	545	6769344180412136	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+548	1451	6769344189097399	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+3	235	6769344242324480	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+3	224	6769344295134413	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+57	409	6769926347727966	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+412	571	6769926349343128	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+574	764	6769926351286036	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+767	2263	6769926365956553	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+5	213	6769926418881003	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+3	221	6769926418961024	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+223	352	6769926420281315	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+355	495	6769926421701635	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+3	852	6769926483070210	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+5	258	6769927493162745	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+2	260	6769927493182752	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+263	406	6769927494653082	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+409	555	6769927496143413	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+558	3118	6769927521483004	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+3	257	6769927676280067	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+259	409	6769927677810414	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+412	567	6769927679390770	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+3	1539	6769927696864711	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+570	2346	6769927696864711	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	131	6769927748953425	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	c44efddfada729a0
+3	153	6769927749443538	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+156	1020	6769927757775441	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	327	6769927824299997	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+329	422	6769927825260213	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	c44efddfada729a0
+425	567	6769927826710541	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+570	1626	6769927837009995	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	210	6769931340158366	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+212	307	6769931341128583	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	c44efddfada729a0
+309	445	6769931342508891	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+448	1294	6769931350638329	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	209	6769935198918312	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+211	303	6769935199868527	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	c44efddfada729a0
+305	438	6769935201218832	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+441	1234	6769935208823785	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+2	201	6769936036291208	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+203	287	6769936037161401	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	c44efddfada729a0
+289	420	6769936038491701	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+423	1205	6769936046047065	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+55	453	6775047140055263	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+455	622	6775047141747785	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+625	795	6775047143468173	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+798	2461	6775047159724270	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+3	208	6775047212835854	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+210	336	6775047214126145	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+339	491	6775047215666486	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+2	828	6775047281679491	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073
+5	592	6790577206987101	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/Util.pbi	72805071bf498e4d
+38	624	6790577207307259	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/User/1_TP2_2020132024_이선우_엘리베이터.pbi	45de774bd762b282
+629	882	6790577209870423	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test_part3.pbi	1f8c177ab1c784f6
+888	1213	6790577213155771	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbd	b4f1f3f4d6973f16
+1218	3815	6790577238419132	C:/Users/이선우/OneDrive/Desktop/Microcom/Debug/BrowseInfo/Microcom test.pbw	7e2ded23894e7073

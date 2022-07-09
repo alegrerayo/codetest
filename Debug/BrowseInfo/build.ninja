@@ -1,0 +1,193 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\CMSIS --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\FRAM.c -xcl_file "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.xcl" -macro_file "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\FRAM.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\FRAM$ group" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.tmp"
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GLCD.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GLCD.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GuiObject.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GuiObject.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim10_8x16_ASCII.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim10_8x16_ASCII.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim20_16x34_ASCII.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim20_16x34_ASCII.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim28_24x48_ASCII.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim28_24x48_ASCII.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim7_6x10_ASCII.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim7_6x10_ASCII.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim8_8x12_ASCII.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim8_8x12_ASCII.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ILI9163B.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ILI9163B.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\GUI --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\STM32F4xx_StdPeriph_Driver --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\STM32F4xx_StdPeriph_Driver --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\STM32F4xx_StdPeriph_Driver --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\1_TP2_2020132024_이선우_엘리베이터.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\1_TP2_2020132024_이선우_엘리베이터.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\User --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Util.c -xcl_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.xcl -macro_file C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Util.c -D STM32F40_41xxx -D USE_STDPERIPH_DRIVER -o C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\Obj\User --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Include\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ -I C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\inc\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.tmp
+  rspfile_name = C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.xcl.rsp
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\FRAM.c
+  flags = "-out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.pbi" -f "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.xcl"
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GLCD.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\GuiObject.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim10_8x16_ASCII.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim20_16x34_ASCII.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim28_24x48_ASCII.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim7_6x10_ASCII.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Gulim8_8x12_ASCII.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\ILI9163B.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\1_TP2_2020132024_이선우_엘리베이터.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.pbi : INDEXER C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.xcl |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Libraries\Util.c
+  flags = -out=C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.pbi -f C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.xcl
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbw : MAKEBROWSE C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbd
+  flags = "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbd" -output "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbw"
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part0.pbi : PDBLINK C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.pbi |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.pbi
+  flags = -M "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part0.pbi" C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\CMSIS\system_stm32f4xx.pbi "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\FRAM$ group\FRAM.pbi" C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GLCD.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\GuiObject.pbi
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part1.pbi : PDBLINK C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.pbi |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.pbi
+  flags = -M "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part1.pbi" C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim10_8x16_ASCII.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim20_16x34_ASCII.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim28_24x48_ASCII.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim7_6x10_ASCII.pbi
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part2.pbi : PDBLINK C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.pbi |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.pbi
+  flags = -M "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part2.pbi" C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\Gulim8_8x12_ASCII.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\GUI\ILI9163B.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_fsmc.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_gpio.pbi
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part3.pbi : PDBLINK C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.pbi |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.pbi
+  flags = -M "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part3.pbi" C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\STM32F4xx_StdPeriph_Driver\stm32f4xx_rcc.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\1_TP2_2020132024_이선우_엘리베이터.pbi C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\User\Util.pbi
+
+build C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbd : PDBLINK C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part0.pbi |  $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part1.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part2.pbi $
+C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part3.pbi
+  flags = -M "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test.pbd" "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part0.pbi" "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part1.pbi" "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part2.pbi" "C$:\Users\이선우\OneDrive\Desktop\Microcom\Debug\BrowseInfo\Microcom$ test_part3.pbi"
+
